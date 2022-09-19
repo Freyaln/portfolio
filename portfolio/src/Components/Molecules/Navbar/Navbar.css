@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+}
+a .header__block__navbar__items {
+  font-family: "Grandstander", cursive;
+  text-decoration: none;
+  color: white;
+}
+a .header__block__navbar__items:hover {
+  text-underline-color: rgba(255, 119, 43, 0.7);
+}
+
+/*# sourceMappingURL=Navbar.css.map */

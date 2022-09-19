@@ -1,0 +1,21 @@
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 80%;
+  background-color: #222222;
+}
+.project .project__gallery {
+  margin-bottom: 2rem;
+}
+.project .project__gallery .project__gallery__img {
+  border-radius: 20px;
+}
+.project .project__gallery .project__gallery__img .project__gallery__img__title {
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=Projects.css.map */
