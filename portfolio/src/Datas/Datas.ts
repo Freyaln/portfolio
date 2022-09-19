@@ -72,7 +72,7 @@ export const personnalInfos: InfosDatas[] = [
           {
             icon: faLocationDot,
             link: 'https://goo.gl/maps/WeDwnM9AJ8W3yykF6',
-            text: 'Know where am I ?',
+            text: 'I live there !',
             type: DataType.LOCATION,
           },
         ],
@@ -80,12 +80,12 @@ export const personnalInfos: InfosDatas[] = [
           {
             icon: faLinkedin,
             link: 'https://www.linkedin.com/in/aurélien-freyling/',
-            text: 'Or you can find more here.',
+            text: 'Want to know my story ?',
           },
           {
             icon: faGithub,
             link: 'https://github.com/Freyaln',
-            text: 'And my projects.',
+            text: 'And my projects ?',
           },
         ],
       },
@@ -157,18 +157,21 @@ export const aboutMeText =
 
 export const projectsImageList = [
   {
+    id: 1,
     img: ProjectImage1,
     col: 2,
     title: 'Project 1',
     langUsed: 'Javascript + SCSS',
   },
   {
+    id: 2,
     img: ProjectImage2,
     title: 'Project 2',
     detail: 'link',
     langUsed: 'Reactjs + Typescript + TailwindCss',
   },
   {
+    id: 3,
     img: ProjectImage4,
     col: 3,
     title: 'Project 3',
@@ -176,12 +179,14 @@ export const projectsImageList = [
     langUsed: 'Vuejs + SCSS',
   },
   {
+    id: 4,
     img: ProjectImage3,
     row: 2,
     title: 'Project 4',
     detail: 'link',
   },
   {
+    id: 5,
     img: ProjectImage5,
     col: 2,
     row: 2,
