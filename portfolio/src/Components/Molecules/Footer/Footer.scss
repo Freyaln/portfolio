@@ -62,29 +62,39 @@
     gap: 1rem;
     width: 40%;
 
-    .footer__block__right__title {
-    }
-
       .__list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
+        gap: 10rem;
         color: #FFF;
 
         .__list__flex {
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          width: 45%;
           li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
             font-family: 'Faustina', serif;
             font-size: 1rem;
+          }
+
+          .__list__icon {
+            font-size: 1.5rem;
           }
 
           .__list__title {
             font-size: 1.15rem;
             white-space: pre-line;
             font-family: 'Faustina', serif;
+          }
+
+          a {
+            color: rgba(255,119,43,0.7);
           }
         }
       }
