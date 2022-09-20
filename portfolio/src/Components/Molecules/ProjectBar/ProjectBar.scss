@@ -1,0 +1,26 @@
+.__main__detailbar__block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 7.5rem;
+
+  .__main__detailbar__block__section {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,119,43,0.7);
+  }
+
+  .__main__detailbar__block__section__title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .__main__detailbar__block__section__text {
+    color: rgba(255,119,43,0.7);
+    font-size: 1.10rem;
+  }
+}

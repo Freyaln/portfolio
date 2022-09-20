@@ -171,6 +171,8 @@ export const projectsImageList = [
     col: 2,
     title: 'Project 1',
     langUsed: 'Javascript + SCSS',
+    client: 'Me',
+    year: 2022,
   },
   {
     id: 2,
@@ -178,6 +180,8 @@ export const projectsImageList = [
     title: 'Project 2',
     detail: 'link',
     langUsed: 'Reactjs + Typescript + TailwindCss',
+    client: 'Me',
+    year: 2022,
   },
   {
     id: 3,
@@ -186,6 +190,8 @@ export const projectsImageList = [
     title: 'Project 3',
     detail: 'link',
     langUsed: 'Vuejs + SCSS',
+    client: 'Me',
+    year: 2022,
   },
   {
     id: 4,
@@ -193,6 +199,8 @@ export const projectsImageList = [
     row: 2,
     title: 'Project 4',
     detail: 'link',
+    client: 'Me',
+    year: 2022,
   },
   {
     id: 5,
@@ -201,5 +209,7 @@ export const projectsImageList = [
     row: 2,
     title: 'Project 5',
     detail: 'link',
+    client: 'Me',
+    year: 2022,
   },
 ];

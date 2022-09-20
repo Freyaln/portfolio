@@ -5,9 +5,8 @@ import Contacts from '../../Molecules/Contacts/Contacts';
 import Footer from '../../Molecules/Footer/Footer';
 import DetailHeader from '../../Molecules/DetailHeader/DetailHeader';
 import { useParams } from 'react-router';
-import Separator from '../../Atoms/Separator/Seperator';
-import Typo, { TextType } from '../../Atoms/Typo/Typo';
 import { useEffect, useState } from 'react';
+import ProjectBar from "../../Molecules/ProjectBar/ProjectBar";
 
 const ProjectDetail = () => {
   const [fill, setFill] = useState<number>(0);
@@ -19,11 +18,12 @@ const ProjectDetail = () => {
       setFill(index + 1);
     } else index && setFill(index);
   }, [fill]);
-  console.log(projectsImageList[fill].img);
+
   return (
     <>
       <DetailHeader src={projectsImageList[fill].img} title={projectsImageList[fill].title} />
       <main>
+          <ProjectBar client={projectsImageList[fill].client} lang={projectsImageList[fill].langUsed} year={projectsImageList[fill].year}/>
         <Contacts fullname={true} email={true} message={true} messageRowCount={10} />
       </main>
       <footer>
