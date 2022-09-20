@@ -72,7 +72,7 @@ export const personnalInfos: InfosDatas[] = [
           {
             icon: faLocationDot,
             link: 'https://goo.gl/maps/WeDwnM9AJ8W3yykF6',
-            text: 'I live there !',
+            text: 'I live here !',
             type: DataType.LOCATION,
           },
         ],
