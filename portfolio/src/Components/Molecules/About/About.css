@@ -23,10 +23,14 @@
   font-family: "Grandstander", cursive;
 }
 .about .about__block__left__description {
+  flex-shrink: 2;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   white-space: pre-line;
   font-family: "Faustina", serif;
+}
+.about .about__block__left__description .about__block__left__description__name {
+  color: rgba(255, 119, 43, 0.7);
 }
 .about .about__block__right {
   display: flex;
@@ -59,7 +63,6 @@
 }
 .about .about__block__right .__list .__list__flex .__list__title {
   font-size: 1.25rem;
-  white-space: pre-line;
   font-family: "Faustina", serif;
 }
 .about .about__middle {

@@ -143,6 +143,8 @@ export const navbarProps: navbarDatas[] = [
   { title: 'Contact', path: 'contact' },
 ];
 
+
+
 export const aboutMeText =
   'Hello ! I am Aurélien (still) young junior developer eager to learn more. \n' +
   ' At this moment you are visiting my' +
@@ -155,6 +157,12 @@ export const aboutMeText =
   '\n' +
   '\n' +
   "The internship I made at Eonix is where I learn Typescript, the hard way. Since then I can't code without it.";
+
+
+export const AboutMeText = '<span class="about__block__left__description__bold">' +
+                           'I am where I am today thanks to @Becode.org' +
+                           '</span>'
+
 
 export const projectsImageList = [
   {
