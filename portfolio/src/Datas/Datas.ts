@@ -144,16 +144,17 @@ export const navbarProps: navbarDatas[] = [
 ];
 
 export const aboutMeText =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada dui at tellus hendrerit ' +
-  'malesuada. Quisque volutpat pellentesque tellus finibus iaculis. Aenean dapibus efficitur est, ' +
-  'et hendrerit nunc faucibus id. Morbi varius accumsan dapibus. Sed sed purus nulla. Mauris a felis sit ' +
-  'amet neque maximus ullamcorper. Etiam dictum tellus ex, eu lacinia tellus pulvinar sed. ' +
+  'Hello ! I am Aurélien (still) young junior developer eager to learn more. \n' +
+  ' At this moment you are visiting my' +
+  ' portfolio writing exclusively in Reactjs with Typescript' +
   '\n' +
   '\n' +
-  'Phasellus nec odio libero. Nam rutrum vestibulum urna in tincidunt. Aliquam erat volutpat. ' +
-  'Etiam neque nunc, rhoncus non dictum eget, bibendum eu magna. Morbi mattis erat a ipsum efficitur, ' +
-  'eget varius eros bibendum. Fusce vitae nulla arcu. Aenean interdum auctor mauris, vel pulvinar arcu rhoncus quis. ' +
-  'Etiam efficitur lacinia lectus ut dictum. Mauris rhoncus cursus mollis. Proin quis eleifend tellus.';
+  'I am where I am today thanks to @Becode.org and @Eonix SA. \n' +
+  'Becode is a bootcamp-like in development where I learned the basics of Javascript, PHP, CSS and Reactjs ' +
+  ' and is the place that taught me to love the code and gave me the will to exercice, experiment and go further.' +
+  '\n' +
+  '\n' +
+  "The internship I made at Eonix is where I learn Typescript, the hard way. Since then I can't code without it.";
 
 export const projectsImageList = [
   {
