@@ -7,6 +7,7 @@ import DetailHeader from '../../Molecules/DetailHeader/DetailHeader';
 import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import ProjectBar from "../../Molecules/ProjectBar/ProjectBar";
+import ProjectAbout from "../../Molecules/ProjectAbout/ProjectAbout";
 
 const ProjectDetail = () => {
   const [fill, setFill] = useState<number>(0);
@@ -24,6 +25,7 @@ const ProjectDetail = () => {
       <DetailHeader src={projectsImageList[fill].img} title={projectsImageList[fill].title} />
       <main>
           <ProjectBar client={projectsImageList[fill].client} lang={projectsImageList[fill].langUsed} year={projectsImageList[fill].year}/>
+          <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'} img={projectsImageList[fill].img}/>
         <Contacts fullname={true} email={true} message={true} messageRowCount={10} />
       </main>
       <footer>
