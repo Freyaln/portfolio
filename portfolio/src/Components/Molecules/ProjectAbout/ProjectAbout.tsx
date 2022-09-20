@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {FC} from 'react';
 import Typo, {TextType} from "../../Atoms/Typo/Typo";
-import {SkillDetail} from "../../../Datas/Datas";
 import Separator from "../../Atoms/Separator/Seperator";
 import './ProjectAbout.scss';
 

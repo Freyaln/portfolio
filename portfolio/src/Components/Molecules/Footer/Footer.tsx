@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FC } from 'react';
 import Typo, { TextType } from '../../Atoms/Typo/Typo';
-import { InfosDatas, projectsImageList } from '../../../Datas/Datas';
+import { InfosDatas } from '../../../Datas/Datas';
 import List from '../../Atoms/List/List';
 import CvEn from '../../../CV/CvEnglish.pdf';
 import './Footer.scss';

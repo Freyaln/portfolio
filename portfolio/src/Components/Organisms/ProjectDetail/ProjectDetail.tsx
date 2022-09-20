@@ -8,6 +8,7 @@ import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import ProjectBar from "../../Molecules/ProjectBar/ProjectBar";
 import ProjectAbout from "../../Molecules/ProjectAbout/ProjectAbout";
+import ScrollToTop from "../../../Helpers/ScrollToTop";
 
 const ProjectDetail = () => {
   const [fill, setFill] = useState<number>(0);
@@ -19,6 +20,8 @@ const ProjectDetail = () => {
       setFill(index + 1);
     } else index && setFill(index);
   }, [fill]);
+
+  ScrollToTop();
 
   return (
     <>
