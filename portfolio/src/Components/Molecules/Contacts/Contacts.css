@@ -25,6 +25,9 @@
     width: 80%;
   }
 }
+.contact .contact__block .contact__block__form__sent {
+  color: #FFFFFF;
+}
 .contact .contact__block__form {
   display: flex;
   flex-direction: column;
