@@ -3,7 +3,7 @@
   position: relative;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 35rem;
   width: 80%;
 
@@ -19,6 +19,7 @@
       width: 7rem;
       border-bottom: 2px solid rgba(255,119,43,0.7);
       padding-bottom: 1rem;
+      margin-top: 5rem;
       font-family: 'Grandstander', cursive;
       }
     }
@@ -47,6 +48,7 @@
       width: 4rem;
       border-bottom: 2px solid rgba(255,119,43,0.7);
       padding-bottom: 1rem;
+      margin-top: 5rem;
       font-family: 'Grandstander', cursive;
     }
 
