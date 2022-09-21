@@ -168,6 +168,7 @@ export const projectsImageList = [
   {
     id: 2,
     img: [ProjectImage2],
+    col: 1,
     title: 'Project 2',
     detail: 'link',
     langUsed: 'Reactjs + Typescript + TailwindCss',
@@ -187,6 +188,7 @@ export const projectsImageList = [
   {
     id: 4,
     img: [ProjectImage3],
+    col: 1,
     row: 2,
     title: 'Project 4',
     detail: 'link',

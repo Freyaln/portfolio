@@ -21,7 +21,7 @@
 
     .header__block__title {
       position: absolute;
-      width: 1000px;
+      width: 60rem;
       height: 200px;
       bottom: 50px;
       left: 17rem;
@@ -29,6 +29,41 @@
       color: white;
       font-size: 4rem;
       font-family: 'Faustina', serif;
+      @media screen and (max-width: 1366px) {
+        width: 45rem;
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 1100px) {
+        width: 25rem;
+        height: 10rem;
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 1050px) {
+        width: 25rem;
+        height: 10rem;
+        font-size: 2rem;
+        left: 12rem;
+      }
+      @media screen and (max-width: 850px) {
+        text-align: left;
+        width: 30rem;
+        left: 3rem;
+      }
+      @media screen and (max-width: 600px) {
+        text-align: left;
+        width: 30rem;
+        left: 3rem;
+      }
+      @media screen and (max-width: 530px) {
+        text-align: left;
+        width: 20rem;
+        left: 3rem;
+      }
+      @media screen and (max-width: 380px) {
+        text-align: left;
+        width: 20rem;
+        left: 1rem;
+      }
     }
 
     .header__block__navbar {
@@ -42,6 +77,9 @@
 
       .header__block__navbar__items {
         font-size: 1.25rem;
+        @media screen and (max-width: 530px) {
+        font-size: 1rem;
+      }
 
         &:hover {
           border-bottom: 2px solid rgba(255,119,43,0.7);

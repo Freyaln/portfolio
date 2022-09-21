@@ -20,6 +20,11 @@
   width: 30%;
   height: auto;
 }
+@media screen and (max-width: 1050px) {
+  .contact .contact__block {
+    width: 80%;
+  }
+}
 .contact .contact__block__form {
   display: flex;
   flex-direction: column;

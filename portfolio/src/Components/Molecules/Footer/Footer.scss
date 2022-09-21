@@ -6,6 +6,12 @@
   align-items: center;
   height: 10rem;
   width: 100%;
+  @media screen and (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1rem;
+  }
 
   .footer__block__left {
     display: flex;
@@ -14,6 +20,12 @@
     gap: 1rem;
     margin-left: 5rem;
     width: 40%;
+    @media screen and (max-width: 850px) {
+      height: auto;
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: 0;
+    }
 
     button {
       width: 12rem;
@@ -21,12 +33,24 @@
       border: none;
       border-radius: 20px;
       font-family: 'Grandstander', cursive;
+      @media screen and (max-width: 1050px) {
+        width: 10rem;
+      }
+      @media screen and (max-width: 380px) {
+        width: 7.5rem;
+      }
     }
 
     .footer__block__left__btnContact {
       background-color: rgba(0,0,0,0.3);
       color: #FFF;
       font-size: 1.10rem;
+      @media screen and (max-width: 1050px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 0.80rem;
+      }
       &:hover {
         cursor: pointer;
         background-color: rgba(255,119,43,0.7);
@@ -41,6 +65,9 @@
         color: black;
         font-weight: bold;
         font-size: 1.10rem;
+      }
+      @media screen and (max-width: 1050px) {
+        font-size: 1rem;
       }
       &:hover {
         cursor: pointer;
@@ -61,7 +88,12 @@
     justify-content: center;
     gap: 1rem;
     width: 40%;
-
+    @media screen and (max-width: 850px) {
+      height: auto;
+      width: 100%;
+      margin-top: 2rem;
+      margin-left: 0;
+    }
       .__list {
         display: flex;
         flex-direction: row;
@@ -69,6 +101,18 @@
         align-items: flex-end;
         gap: 5rem;
         color: #FFF;
+        @media screen and (max-width: 1100px) {
+          gap: 4rem;
+        }
+        @media screen and (max-width: 1050px) {
+          gap: 2rem;
+        }
+        @media screen and (max-width: 850px) {
+          gap: 5rem;
+        }
+        @media screen and (max-width: 380px) {
+          gap: 0;
+        }
 
         .__list__flex {
           display: flex;
@@ -80,16 +124,18 @@
             gap: 1rem;
             font-family: 'Faustina', serif;
             font-size: 1rem;
+
+            @media screen and (max-width: 1366px) {
+              font-size: 0.85rem;
+            }
           }
 
           .__list__icon {
             font-size: 1.5rem;
-          }
 
-          .__list__title {
-            font-size: 1.15rem;
-            white-space: pre-line;
-            font-family: 'Faustina', serif;
+            @media screen and (max-width: 1366px) {
+              font-size: 1rem;
+            }
           }
 
           a {

@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { FC } from 'react';
+import {FC, useEffect, useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { ImageList, ImageListItem, ImageListItemBar, styled } from '@mui/material';
 import { projectsImageList } from '../../../Datas/Datas';
 import './Projects.scss';
 import Separator from '../../Atoms/Separator/Seperator';
 import { Link } from 'react-router-dom';
+import {useDetectMobile} from "../../../Helpers/CheckRes";
 
 interface IProjectsProps {
   classname?: string;
@@ -22,7 +23,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
   return (
     <section className="project" id="projects">
       <ImageList
-        cols={3}
+        cols={useDetectMobile() ? 1 : 3}
         gap={25}
         rowHeight={'auto'}
         className="project__gallery"
@@ -56,7 +57,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
               },
             }}
             key={uuidv4()}
-            cols={item.col || 1}
+            cols={useDetectMobile() ? 1 : item.col}
             rows={item.row || 1}
           >
             <img

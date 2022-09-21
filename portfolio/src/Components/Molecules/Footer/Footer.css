@@ -7,6 +7,14 @@
   height: 10rem;
   width: 100%;
 }
+@media screen and (max-width: 850px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1rem;
+  }
+}
 .footer .footer__block__left {
   display: flex;
   flex-direction: row;
@@ -15,6 +23,14 @@
   margin-left: 5rem;
   width: 40%;
 }
+@media screen and (max-width: 850px) {
+  .footer .footer__block__left {
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
 .footer .footer__block__left button {
   width: 12rem;
   height: 4rem;
@@ -22,10 +38,30 @@
   border-radius: 20px;
   font-family: "Grandstander", cursive;
 }
+@media screen and (max-width: 1050px) {
+  .footer .footer__block__left button {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer .footer__block__left button {
+    width: 7.5rem;
+  }
+}
 .footer .footer__block__left .footer__block__left__btnContact {
   background-color: rgba(0, 0, 0, 0.3);
   color: #FFF;
   font-size: 1.1rem;
+}
+@media screen and (max-width: 1050px) {
+  .footer .footer__block__left .footer__block__left__btnContact {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer .footer__block__left .footer__block__left__btnContact {
+    font-size: 0.8rem;
+  }
 }
 .footer .footer__block__left .footer__block__left__btnContact:hover {
   cursor: pointer;
@@ -40,6 +76,11 @@
   color: black;
   font-weight: bold;
   font-size: 1.1rem;
+}
+@media screen and (max-width: 1050px) {
+  .footer .footer__block__left .footer__block__left__btnCv {
+    font-size: 1rem;
+  }
 }
 .footer .footer__block__left .footer__block__left__btnCv:hover {
   cursor: pointer;
@@ -59,6 +100,14 @@
   gap: 1rem;
   width: 40%;
 }
+@media screen and (max-width: 850px) {
+  .footer .footer__block__right {
+    height: auto;
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
 .footer .footer__block__right .__list {
   display: flex;
   flex-direction: row;
@@ -66,6 +115,26 @@
   align-items: flex-end;
   gap: 5rem;
   color: #FFF;
+}
+@media screen and (max-width: 1100px) {
+  .footer .footer__block__right .__list {
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .footer .footer__block__right .__list {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .footer .footer__block__right .__list {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer .footer__block__right .__list {
+    gap: 0;
+  }
 }
 .footer .footer__block__right .__list .__list__flex {
   display: flex;
@@ -79,13 +148,18 @@
   font-family: "Faustina", serif;
   font-size: 1rem;
 }
+@media screen and (max-width: 1366px) {
+  .footer .footer__block__right .__list .__list__flex li {
+    font-size: 0.85rem;
+  }
+}
 .footer .footer__block__right .__list .__list__flex .__list__icon {
   font-size: 1.5rem;
 }
-.footer .footer__block__right .__list .__list__flex .__list__title {
-  font-size: 1.15rem;
-  white-space: pre-line;
-  font-family: "Faustina", serif;
+@media screen and (max-width: 1366px) {
+  .footer .footer__block__right .__list .__list__flex .__list__icon {
+    font-size: 1rem;
+  }
 }
 .footer .footer__block__right .__list .__list__flex a {
   color: rgba(255, 119, 43, 0.7);

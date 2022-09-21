@@ -27,9 +27,6 @@ const Footer: FC<IFooterProps> = ({ dataList }) => {
         </button>
       </article>
       <article className="footer__block__right">
-        <Typo type={TextType.H2} className="footer__block__right__title">
-          {}
-        </Typo>
         <List classname="__list" optionsInfos={dataList} />
       </article>
     </section>
