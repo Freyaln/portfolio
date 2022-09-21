@@ -61,7 +61,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
           >
             <img
               className="project__gallery__img"
-              {...srcset(item.img, 100, item.row, item.col)}
+              {...srcset(item.img[0], 100, item.row, item.col)}
               alt={`project ${index}`}
               loading="lazy"
             />

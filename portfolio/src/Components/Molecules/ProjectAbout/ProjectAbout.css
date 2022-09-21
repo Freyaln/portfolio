@@ -2,19 +2,18 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   height: 35rem;
   width: 80%;
 }
-.project__about .project__about__left {
+.project__about .project__about__block {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-right: 5rem;
   width: 50%;
 }
-.project__about .project__about__left .project__about__left__title {
+.project__about .project__about__block .project__about__block__title {
   color: white;
   font-size: 1.5rem;
   width: 29rem;
@@ -22,24 +21,66 @@
   padding-bottom: 1rem;
   font-family: "Grandstander", cursive;
 }
-.project__about .project__about__block__left__description {
-  flex-shrink: 2;
+.project__about .project__about__block__description {
   color: white;
   font-size: 1.1rem;
   white-space: pre-line;
   font-family: "Faustina", serif;
 }
-.project__about .project__about__block__left__description .project__bout__block__left__description__name {
+.project__about .project__about__block__description .project__bout__block__left__description__name {
   color: rgba(255, 119, 43, 0.7);
 }
 .project__about .project__about__img__block {
-  width: 50%;
+  display: flex;
+  align-items: center;
+  width: 40%;
   height: 25rem;
 }
 .project__about .project__about__img__block .project__about__img {
-  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.project__flow__block {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  height: auto;
+  width: 80%;
+}
+.project__flow__block .project__flow__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.project__flow__block .project__flow__steps .project__flow__steps__title {
+  color: white;
+  font-size: 1.5rem;
+  width: 29rem;
+  border-bottom: 2px solid rgba(255, 119, 43, 0.7);
+  padding-bottom: 1rem;
+  font-family: "Grandstander", cursive;
+}
+.project__flow__block .project__flow__steps .project__flow__steps__block__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.project__flow__block .project__flow__steps .project__flow__steps__block__description .project__flow__steps__block__description__text {
+  color: white;
+  width: 75%;
+  font-size: 1.1rem;
+  white-space: pre-line;
+  font-family: "Faustina", serif;
+}
+.project__flow__block .project__flow__steps .project__flow__steps__block__description .project__flow__img {
+  max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=ProjectAbout.css.map */

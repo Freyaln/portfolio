@@ -65,14 +65,14 @@ const List: FC<IListProps> = ({ optionsSkills, optionsInfos, classname, children
                       ) : i.type === DataType.PHONE ? (
                         <>
                           <FontAwesomeIcon icon={i.icon} className="__list__icon" />
-                          <a href={`tel:${i.link}`}>
+                          <a href={`tel:${i.link}` } target='_blank' rel="noreferrer">
                             <Typo type={TextType.TEXT}>{i.text}</Typo>
                           </a>
                         </>
                       ) : i.type === DataType.LOCATION ? (
                         <>
                           <FontAwesomeIcon icon={i.icon} className="__list__icon" />
-                          <a href={i.link}>
+                          <a href={i.link} target='_blank' rel="noreferrer">
                             <Typo type={TextType.TEXT}>{i.text}</Typo>
                           </a>
                         </>
@@ -86,7 +86,7 @@ const List: FC<IListProps> = ({ optionsSkills, optionsInfos, classname, children
                   {elem.Socials.map((i) => (
                     <li key={uuidv4()}>
                       <FontAwesomeIcon icon={i.icon} className="__list__icon" />
-                      <a href={i.link}>
+                      <a href={i.link} target='_blank' rel="noreferrer">
                         <Typo type={TextType.TEXT}>{i.text}</Typo>
                       </a>
                     </li>

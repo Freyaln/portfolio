@@ -12,6 +12,7 @@ import ScrollToTop from "../../../Helpers/ScrollToTop";
 
 const ProjectDetail = () => {
   const [fill, setFill] = useState<number>(0);
+  const [wip, setWip] = useState<string>('')
   const { projectName } = useParams();
   const index = projectName && projectsImageList.map((item) => item.title).indexOf(projectName);
 
@@ -19,17 +20,32 @@ const ProjectDetail = () => {
     if (index && index === -1) {
       setFill(index + 1);
     } else index && setFill(index);
+
+    if (projectsImageList[fill].finished === true) {
+        setWip('Finished')
+    } else setWip('Work in Progress')
+
   }, [fill]);
 
   ScrollToTop();
 
   return (
     <>
-      <DetailHeader src={projectsImageList[fill].img} title={projectsImageList[fill].title} />
+      <DetailHeader src={projectsImageList[fill].img[0]} title={projectsImageList[fill].title} />
       <main>
-          <ProjectBar client={projectsImageList[fill].client} lang={projectsImageList[fill].langUsed} year={projectsImageList[fill].year}/>
-          <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'} img={projectsImageList[fill].img}/>
-        <Contacts fullname={true} email={true} message={true} messageRowCount={10} />
+          <ProjectBar
+              client={projectsImageList[fill].client}
+              lang={projectsImageList[fill].langUsed}
+              year={projectsImageList[fill].year}
+              collab={projectsImageList[fill].collab}
+              collabLink={projectsImageList[fill].collabLink}
+              finished={wip}/>
+          <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'}
+                        img={projectsImageList[fill].img[0]}
+                        flow={projectsImageList[fill].img[1]}
+                        design={projectsImageList[fill].img[2]}
+                        titleSteps={projectsImageList[fill].steps}
+                        description={projectsImageList[fill].description}/>
       </main>
       <footer>
         <Footer dataList={personnalInfos} />

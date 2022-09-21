@@ -1,9 +1,10 @@
-import ProjectImage1 from '../img/proj1.png';
+import AQI from '../img/wip.png';
+import AQIWireframes from '../img/wireframes.png'
+import AQIDesign from '../img/inspiration.png'
 import ProjectImage2 from '../img/proj2.png';
 import ProjectImage3 from '../img/proj3.png';
 import ProjectImage4 from '../img/proj5.png';
 import ProjectImage5 from '../img/proj4.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faLocationDot, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -143,40 +144,27 @@ export const navbarProps: navbarDatas[] = [
   { title: 'Contact', path: 'contact' },
 ];
 
-
-
-export const aboutMeText =
-  'Hello ! I am Aurélien (still) young junior developer eager to learn more. \n' +
-  ' At this moment you are visiting my' +
-  ' portfolio writing exclusively in Reactjs with Typescript' +
-  '\n' +
-  '\n' +
-  'I am where I am today thanks to @Becode.org and @Eonix SA. \n' +
-  'Becode is a bootcamp-like in development where I learned the basics of Javascript, PHP, CSS and Reactjs ' +
-  ' and is the place that taught me to love the code and gave me the will to exercice, experiment and go further.' +
-  '\n' +
-  '\n' +
-  "The internship I made at Eonix is where I learn Typescript, the hard way. Since then I can't code without it.";
-
-
-export const AboutMeText = '<span class="about__block__left__description__bold">' +
-                           'I am where I am today thanks to @Becode.org' +
-                           '</span>'
-
-
 export const projectsImageList = [
   {
     id: 1,
-    img: ProjectImage1,
+    img: [AQI, AQIWireframes, AQIDesign],
     col: 2,
-    title: 'Project 1',
-    langUsed: 'Javascript + SCSS',
-    client: 'Me',
+    title: 'AQI',
+    langUsed: 'Vuejs (SFC) + SCSS',
+    client: 'Myself & Kiril',
     year: 2022,
+    collab: 'Kiril Bernard Tucker',
+    collabLink: 'https://github.com/Kirilbt',
+    finished: false,
+    steps: ['Userflow & Wireframes', 'Design'],
+    description: ['We decided to experiment the UX brainstorming part because this is not always (may I dare say never ?) our job\n' +
+                  '                        as front-end developers. \n', 'After days passed talking and taking place as a user we decided that we were good and moved on to the designing table. ' +
+                                                                         'We began to search inspiration everywhere and then started to build something on our own.'],
+
   },
   {
     id: 2,
-    img: ProjectImage2,
+    img: [ProjectImage2],
     title: 'Project 2',
     detail: 'link',
     langUsed: 'Reactjs + Typescript + TailwindCss',
@@ -185,7 +173,7 @@ export const projectsImageList = [
   },
   {
     id: 3,
-    img: ProjectImage4,
+    img: [ProjectImage4],
     col: 3,
     title: 'Project 3',
     detail: 'link',
@@ -195,7 +183,7 @@ export const projectsImageList = [
   },
   {
     id: 4,
-    img: ProjectImage3,
+    img: [ProjectImage3],
     row: 2,
     title: 'Project 4',
     detail: 'link',
@@ -204,7 +192,7 @@ export const projectsImageList = [
   },
   {
     id: 5,
-    img: ProjectImage5,
+    img: [ProjectImage5],
     col: 2,
     row: 2,
     title: 'Project 5',

@@ -22,5 +22,9 @@
   .__main__detailbar__block__section__text {
     color: rgba(255,119,43,0.7);
     font-size: 1.10rem;
+
+    a {
+      color: inherit;
+    }
   }
 }
