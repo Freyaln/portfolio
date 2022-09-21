@@ -7,28 +7,21 @@ import './ProjectAbout.scss';
 interface IAboutProps {
     title: string;
     titleSteps?: string[];
+    about?: string;
     img?: string;
     flow? : string;
     design?: string;
     description?: string[];
 }
 
-const ProjectAbout: FC<IAboutProps> = ({title, img, titleSteps, description, flow, design}) => {
+const ProjectAbout: FC<IAboutProps> = ({title, about, img, titleSteps, description, flow, design}) => {
     return (
         <>
         <section className='project__about' id='about'>
             <article className='project__about__block'>
                 <Typo type={TextType.H2} className='project__about__block__title'>{title}</Typo>
                 <Typo type={TextType.TEXT} className='project__about__block__description'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum rutrum ullamcorper.
-                    Mauris et tincidunt elit. Aenean convallis lacinia quam. Nunc sit amet condimentum libero.
-                    In ullamcorper turpis placerat massa posuere, id pellentesque sapien euismod. Mauris tincidunt laoreet eros,
-                    nec fermentum enim consequat a.
-                    {'\n'}{'\n'}
-                    Nulla eu risus consequat, tempor diam ac, laoreet nisl. Etiam ac cursus sapien, ac tempor eros.
-                    In fringilla neque at ultricies mollis. Nulla ullamcorper eros mauris
-                    {'\n'}{'\n'}
-                    Praesent volutpat enim in nulla euismod, sit amet pellentesque augue suscipit. Phasellus nec finibus felis.
+                    {about}
                 </Typo>
             </article>
             <article className='project__about__img__block'>
@@ -61,6 +54,7 @@ const ProjectAbout: FC<IAboutProps> = ({title, img, titleSteps, description, flo
                     </article>
                 </article>
             </section>
+            <Separator/>
         </section>
         </>
     )

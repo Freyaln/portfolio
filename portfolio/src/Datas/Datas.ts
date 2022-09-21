@@ -157,6 +157,9 @@ export const projectsImageList = [
     collabLink: 'https://github.com/Kirilbt',
     finished: false,
     steps: ['Userflow & Wireframes', 'Design'],
+    about: 'Kiril and I know each other for a long time and I was surprised when he told me a few month ago that he is a designer working on with front-end developers. \n\n'  +
+           'We eventually talked about doing a project together and decided to give it a go. We wanted a project that could be displayed on our own portfolio and that it needed to be functionnal. \n\n' +
+    'And here we are, working on this, it is still a work in progress and I will update the infos and description the same time the app evolve.',
     description: ['We decided to experiment the UX brainstorming part because this is not always (may I dare say never ?) our job\n' +
                   '                        as front-end developers. \n', 'After days passed talking and taking place as a user we decided that we were good and moved on to the designing table. ' +
                                                                          'We began to search inspiration everywhere and then started to build something on our own.'],

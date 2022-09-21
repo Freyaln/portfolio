@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 15rem;
+  height: 10rem;
   width: 100%;
 
   .footer__block__left {
@@ -67,13 +67,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
-        gap: 10rem;
+        gap: 5rem;
         color: #FFF;
 
         .__list__flex {
           display: flex;
           flex-direction: column;
-          gap: 1rem;
           li {
             display: flex;
             flex-direction: row;

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { personnalInfos, projectsImageList } from '../../../Datas/Datas';
 import './ProjectDetail.scss';
-import Contacts from '../../Molecules/Contacts/Contacts';
 import Footer from '../../Molecules/Footer/Footer';
 import DetailHeader from '../../Molecules/DetailHeader/DetailHeader';
 import { useParams } from 'react-router';
@@ -31,7 +30,8 @@ const ProjectDetail = () => {
 
   return (
     <>
-      <DetailHeader src={projectsImageList[fill].img[0]} title={projectsImageList[fill].title} />
+      <DetailHeader src={projectsImageList[fill].img[0]}
+                    title={projectsImageList[fill].title}/>
       <main>
           <ProjectBar
               client={projectsImageList[fill].client}
@@ -41,6 +41,7 @@ const ProjectDetail = () => {
               collabLink={projectsImageList[fill].collabLink}
               finished={wip}/>
           <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'}
+                        about={projectsImageList[fill].about}
                         img={projectsImageList[fill].img[0]}
                         flow={projectsImageList[fill].img[1]}
                         design={projectsImageList[fill].img[2]}
