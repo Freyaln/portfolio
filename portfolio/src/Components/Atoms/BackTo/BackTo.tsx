@@ -8,7 +8,7 @@ const BackTo = () => {
     return (
         <div className='__detail__header__back'>
             <Link to={'/'}>
-                <FontAwesomeIcon icon={faArrowLeftLong} style={{color: "white" }}/>
+                <FontAwesomeIcon icon={faArrowLeftLong} style={{color: "white" }} className='BackTo'/>
             </Link>
         </div>
     )

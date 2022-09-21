@@ -3,6 +3,7 @@ import {FC} from 'react';
 import Typo, {TextType} from "../../Atoms/Typo/Typo";
 import Separator from "../../Atoms/Separator/Seperator";
 import './ProjectAbout.scss';
+import {useDetectMobile} from "../../../Helpers/CheckRes";
 
 interface IAboutProps {
     title: string;
@@ -27,7 +28,7 @@ const ProjectAbout: FC<IAboutProps> = ({title, about, img, titleSteps, descripti
             <article className='project__about__img__block'>
                 <img src={img} className='project__about__img'/>
             </article>
-            <Separator/>
+            { useDetectMobile() ? '' : <Separator/> }
         </section>
         <section className='project__flow__block'>
             <section className='project__flow__steps'>
@@ -54,7 +55,7 @@ const ProjectAbout: FC<IAboutProps> = ({title, about, img, titleSteps, descripti
                     </article>
                 </article>
             </section>
-            <Separator/>
+            { useDetectMobile() ? '' : <Separator/> }
         </section>
         </>
     )

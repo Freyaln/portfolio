@@ -18,16 +18,39 @@
   max-height: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 1366px) {
+  .detail__header .detail__header__block .detail__header__block__image {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
 .detail__header .detail__header__block .detail__header__block__title {
   position: absolute;
   width: 20rem;
   height: 5rem;
   bottom: 50px;
-  right: 100px;
+  right: 1rem;
   z-index: 10;
   color: white;
   font-size: 4rem;
   font-family: "Faustina", serif;
+}
+@media screen and (max-width: 1366px) {
+  .detail__header .detail__header__block .detail__header__block__title {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .detail__header .detail__header__block .detail__header__block__title {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .detail__header .detail__header__block .detail__header__block__title {
+    width: 7rem;
+    right: 7rem;
+  }
 }
 
 /*# sourceMappingURL=DetailHeader.css.map */

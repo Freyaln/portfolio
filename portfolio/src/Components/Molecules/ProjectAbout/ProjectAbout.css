@@ -6,6 +6,12 @@
   height: 35rem;
   width: 80%;
 }
+@media screen and (max-width: 850px) {
+  .project__about {
+    height: auto;
+    width: 60%;
+  }
+}
 .project__about .project__about__block {
   display: flex;
   flex-direction: column;
@@ -13,12 +19,30 @@
   margin-right: 5rem;
   width: 50%;
 }
+@media screen and (max-width: 850px) {
+  .project__about .project__about__block {
+    width: 100%;
+    margin-left: 2.5rem;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .project__about .project__about__block {
+    margin-left: 5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .project__about .project__about__block {
+    margin-left: 7.5rem;
+    gap: 0;
+  }
+}
 .project__about .project__about__block .project__about__block__title {
   color: white;
   font-size: 1.5rem;
-  width: 29rem;
-  border-bottom: 2px solid rgba(255, 119, 43, 0.7);
-  padding-bottom: 1rem;
+  width: auto;
+  text-decoration: underline rgba(255, 119, 43, 0.7);
+  text-underline-offset: 1rem;
   font-family: "Grandstander", cursive;
 }
 .project__about .project__about__block__description {
@@ -36,9 +60,19 @@
   width: 40%;
   height: 25rem;
 }
+@media screen and (max-width: 850px) {
+  .project__about .project__about__img__block {
+    display: none;
+  }
+}
 .project__about .project__about__img__block .project__about__img {
   max-width: 100%;
   height: auto;
+}
+@media screen and (max-width: 850px) {
+  .project__about .project__about__img__block .project__about__img {
+    display: none;
+  }
 }
 
 .project__flow__block {
@@ -59,9 +93,9 @@
 .project__flow__block .project__flow__steps .project__flow__steps__title {
   color: white;
   font-size: 1.5rem;
-  width: 29rem;
-  border-bottom: 2px solid rgba(255, 119, 43, 0.7);
-  padding-bottom: 1rem;
+  width: auto;
+  text-decoration: underline rgba(255, 119, 43, 0.7);
+  text-underline-offset: 1rem;
   font-family: "Grandstander", cursive;
 }
 .project__flow__block .project__flow__steps .project__flow__steps__block__description {
