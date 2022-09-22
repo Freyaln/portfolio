@@ -44,9 +44,8 @@
     font-size: 1.10rem;
     white-space: pre-line;
     font-family: 'Faustina', serif;
-
-    .project__bout__block__left__description__name {
-      color: rgba(255, 119, 43, 0.7);
+    @media screen and (max-width: 430px) {
+      font-size: 1rem;
     }
   }
 

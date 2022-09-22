@@ -51,8 +51,10 @@
   white-space: pre-line;
   font-family: "Faustina", serif;
 }
-.project__about .project__about__block__description .project__bout__block__left__description__name {
-  color: rgba(255, 119, 43, 0.7);
+@media screen and (max-width: 430px) {
+  .project__about .project__about__block__description {
+    font-size: 1rem;
+  }
 }
 .project__about .project__about__img__block {
   display: flex;
