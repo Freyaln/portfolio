@@ -23,7 +23,7 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
     const REACT_APP_SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID!;
     const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
     const REACT_APP_PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY!;
-    const REACT_APP_RECAPTCHA_KEY: string = process.env.REACT_APP_RECAPTCHA2!;
+    const REACT_APP_RECAPTCHA_KEY: string = process.env.REACT_APP_RECAPTCHA!;
 
     function handleCaptcha() {
         setIdDisabled(!isDisabled)
