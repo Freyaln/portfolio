@@ -32,12 +32,6 @@ export interface InfosDatas {
           link: string;
           text: string;
           type: DataType;
-        },
-        {
-          icon: IconDefinition;
-          link: string;
-          text: string;
-          type: DataType;
         }
       ];
       Socials: [
@@ -62,15 +56,9 @@ export const personnalInfos: InfosDatas[] = [
       {
         Contact: [
           {
-            icon: faAt,
-            link: 'freyling.aurelien@gmail.com',
-            text: 'Want to be (T)extual ?',
-            type: DataType.EMAIL,
-          },
-          {
             icon: faPhone,
             link: '+32475942987',
-            text: 'Or just talk ?',
+            text: 'Want to talk ?',
             type: DataType.PHONE,
           },
           {
