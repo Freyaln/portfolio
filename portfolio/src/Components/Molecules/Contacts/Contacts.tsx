@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {FC, useEffect, useRef, useState} from 'react';
 import Typo, {TextType} from "../../Atoms/Typo/Typo";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
 import './Contacts.scss';
 import Separator from "../../Atoms/Separator/Seperator";
@@ -16,10 +17,17 @@ interface IContactsProps {
 
 const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, message, messageRowCount}) => {
     const [sent, setSent] = useState<boolean>(false)
+    const [isDisabled, setIdDisabled] = useState<boolean>(true)
     const form = useRef(null);
+    const captchaRef = useRef(null)
     const REACT_APP_SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID!;
     const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
     const REACT_APP_PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY!;
+    const REACT_APP_RECAPTCHA_KEY: string = process.env.REACT_APP_RECAPTCHA2!;
+
+    function handleCaptcha() {
+        setIdDisabled(!isDisabled)
+    }
 
     const sendEmail = (e:  React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -79,8 +87,12 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
                  </label>
                      <textarea name='message' rows={messageRowCount} required={true}/>
                  </>}
+                    <ReCAPTCHA
+                        sitekey={REACT_APP_RECAPTCHA_KEY}
+                        ref={captchaRef}
+                        onChange={handleCaptcha}/>
                 <>
-                        <input type='submit' name='submit' value='Get in touch' className='contact__block__form__submit'/>
+                        <input type='submit' name='submit' value='Get in touch' className='contact__block__form__submit' disabled={isDisabled}/>
                     </>
             </form>
                 }
