@@ -10,36 +10,42 @@ interface ProjectDetail {
     collab? : string;
     collabLink? : string;
     finished? : string;
+    link?: string;
 }
 
-const ProjectBar: FC<ProjectDetail> = ({client, year, lang, collab, collabLink, finished}) => {
+const ProjectBar: FC<ProjectDetail> = ({client, year, lang, collab,link, collabLink, finished}) => {
     return (
         <section className='__main__detailbar__block'>
-            <div className='__main__detailbar__block__section'>
+            {client && <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Client</span>
                 {'\n'}
                 <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'>{client}</Typo>
-            </div>
-            <div className='__main__detailbar__block__section'>
+            </div> }
+            {year && <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Year</span>
                 {'\n'}
                 <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'>{year}</Typo>
-            </div>
-            <div className='__main__detailbar__block__section'>
+            </div>}
+            {lang &&  <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Technologies</span>
                 {'\n'}
                 <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'>{lang}</Typo>
-            </div>
-            <div className='__main__detailbar__block__section'>
+            </div>}
+            {collab &&  <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Collaborator</span>
                 {'\n'}
                 <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'><a href={collabLink} target='_blank' rel="noreferrer">{collab}</a></Typo>
-            </div>
-            <div className='__main__detailbar__block__section'>
+            </div>}
+            { finished && <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Current state</span>
                 {'\n'}
                 <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'>{finished}</Typo>
-            </div>
+            </div>}
+            { link && <div className='__main__detailbar__block__section'>
+                <span className='__main__detailbar__block__section__title'>Website</span>
+                {'\n'}
+                <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'><a href={link} target='_blank' rel="noreferrer">Restapicountry</a></Typo>
+            </div>}
         </section>
     )
 }

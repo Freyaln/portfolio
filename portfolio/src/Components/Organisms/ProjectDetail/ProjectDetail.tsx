@@ -39,7 +39,8 @@ const ProjectDetail = () => {
               year={projectsImageList[fill].year}
               collab={projectsImageList[fill].collab}
               collabLink={projectsImageList[fill].collabLink}
-              finished={wip}/>
+              finished={wip}
+              link={projectsImageList[fill].link}/>
           <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'}
                         about={projectsImageList[fill].about}
                         img={projectsImageList[fill].img[0]}

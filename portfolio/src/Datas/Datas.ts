@@ -1,6 +1,9 @@
 import AQI from '../img/wip.png';
-import AQIWireframes from '../img/wireframes.png'
-import AQIDesign from '../img/inspiration.png'
+import AQIWireframes from '../img/wireframes.png';
+import AQIDesign from '../img/inspiration.png';
+import RestHome from '../img/restcountry1.png';
+import RestSearch from '../img/restcountry2.png';
+import RestModal from '../img/restcountry3.png';
 import ProjectImage2 from '../img/proj2.png';
 import ProjectImage3 from '../img/proj3.png';
 import ProjectImage4 from '../img/proj5.png';
@@ -168,13 +171,22 @@ export const projectsImageList = [
   },
   {
     id: 2,
-    img: [ProjectImage2],
+    img: [RestHome, RestSearch, RestModal],
     col: 1,
-    title: 'Project 2',
-    detail: 'link',
-    langUsed: 'Reactjs + Typescript + TailwindCss',
+    title: 'Country list',
+    link: 'https://restapicountry.netlify.app/',
+    langUsed: 'Reactjs + axios',
     client: 'Me',
-    year: 2022,
+    steps: ['The hardest part', 'The discovery' ],
+    about: 'We are in February, two or three weeks prior my internship and I feel completely lost. \n' +
+            'Lost because I know that my internship will be in React and I don\'t feel confident enough to be calm.. \n\n' +
+            'So what did I do ? \n' +
+            'I chose to practice and practice and practice, I started by scrapping the grass at React mountain feet and began to actually like it so I climbed that mountain and I searched for a project to make and found this one : \n\n' +
+            'A simple country list app that I made using Axios and MaterialUI, this project was my first time doing a Modal, Light & Dark mode and a dynamic search.',
+    description: ['The hardest part was definitely the dynamic search, how many hours did I spent thinking and experimenting or searching the internets in order to find a way to do it and what joy did I felt when I finally did it ! ',
+      'The discovery was nothing big or anything but a new one to me, implementing dynamic datas inside a modal'],
+    year: 2021,
+    finished: true,
   },
   {
     id: 3,
