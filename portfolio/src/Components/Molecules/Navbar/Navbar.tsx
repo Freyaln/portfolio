@@ -15,7 +15,7 @@ interface INavbarPropsInterface {
 
 var styles = {
     bmBurgerButton: {
-        position: 'fixed',
+        position: 'relative',
         width: '36px',
         height: '30px',
         left: '36px',
@@ -52,15 +52,24 @@ var styles = {
 
 const Navbar: FC<INavbarPropsInterface> = ({classname, options }) => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
+    const handleOpen = (state: { isOpen: boolean | ((prevState: boolean) => boolean) }) => {
+        setMenuOpen(state.isOpen);
+    }
+    function handleClose() {
+        setMenuOpen(false);
+    }
+
+    console.log(menuOpen)
     return (
         <nav>
             {useDetectMobile() ?
-                <Menu right isOpen={menuOpen} styles={styles}>
+                <Menu right isOpen={menuOpen} onStateChange={handleOpen} styles={styles}>
                     <ol className={classname}>
                         {options.map((items, index) =>
 
                             <li key={uuidv4()}>
-                                <Link key={uuidv4()} activeClass='active' to={items.path} smooth={true} onClick={() => setMenuOpen(false)}>
+                                <Link key={uuidv4()} activeClass='active' to={items.path} smooth={true} onClick={() => handleClose()}>
                                     <Typo
                                         type={TextType.TEXT}
                                         className='header__block__navbar__items'>
