@@ -45,8 +45,6 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
         });
     }
 
-    console.log(isFilled)
-
     if(isFilled.fullname.length >= 5 && isFilled.email.length >= 10 && isFilled.message.length >= 15 ) {
         setInputValidated(true)
     }

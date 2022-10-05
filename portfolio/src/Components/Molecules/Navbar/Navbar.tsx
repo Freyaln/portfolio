@@ -60,7 +60,6 @@ const Navbar: FC<INavbarPropsInterface> = ({classname, options }) => {
         setMenuOpen(false);
     }
 
-    console.log(menuOpen)
     return (
         <nav>
             {useDetectMobile() ?
