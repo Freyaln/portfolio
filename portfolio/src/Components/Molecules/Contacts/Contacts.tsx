@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {FC, useEffect, useRef, useState} from 'react';
+import {FC, useRef, useState} from 'react';
 import Typo, {TextType} from "../../Atoms/Typo/Typo";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
@@ -15,15 +15,42 @@ interface IContactsProps {
     messageRowCount?: number;
 }
 
+interface MessageValidation {
+        fullname: string;
+        lastname?: string;
+        firstname?: string;
+        email: string;
+        message: string;
+}
+
 const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, message, messageRowCount}) => {
-    const [sent, setSent] = useState<boolean>(false)
-    const [isDisabled, setIdDisabled] = useState<boolean>(true)
+    const [sent, setSent] = useState<boolean>(false);
+    const [isDisabled, setIdDisabled] = useState<boolean>(true);
+    const [isFilled, setIsFilled] = useState<MessageValidation>({fullname: '', email: '', message: '' });
+    const [inputValidated, setInputValidated] = useState<boolean>(false);
     const form = useRef(null);
-    const captchaRef = useRef(null)
+    const captchaRef = useRef(null);
     const REACT_APP_SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID!;
     const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
     const REACT_APP_PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY!;
     const REACT_APP_RECAPTCHA_KEY: string = process.env.REACT_APP_RECAPTCHA!;
+
+    const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+        setIsFilled({...isFilled, [e.currentTarget.name]: e.currentTarget.value,
+        });
+    }
+
+    const handleTextAreaChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
+        setIsFilled({...isFilled, [e.currentTarget.name]: e.currentTarget.value,
+        });
+    }
+
+    console.log(isFilled)
+
+    if(isFilled.fullname.length >= 5 && isFilled.email.length >= 10 && isFilled.message.length >= 15 ) {
+        setInputValidated(true)
+    }
+
 
     function handleCaptcha() {
         setIdDisabled(!isDisabled)
@@ -57,7 +84,7 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
                     <label htmlFor='fullname'>
                     Fullname
                     </label>
-                    <input type='text' name='fullname' autoComplete='off' required={true}/>
+                    <input type='text' name='fullname' autoComplete='off' required={true} minLength={5} onBlur={handleInputChange}/>
                  </>}
                 {lastname &&
                  <>
@@ -78,19 +105,20 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
                 <label htmlFor='email'>
                     Email
                 </label>
-                    <input type='email' name='email' autoComplete='new-password' required={true}/>
+                    <input type='email' name='email' autoComplete='new-password' required={true} minLength={10} onBlur={handleInputChange}/>
                 </>}
                 {message &&
                  <>
                  <label htmlFor='message'>
                     Message
                  </label>
-                     <textarea name='message' rows={messageRowCount} required={true}/>
+                     <textarea name='message' rows={messageRowCount} required={true} minLength={15} onBlur={handleTextAreaChange}/>
                  </>}
                     <ReCAPTCHA
                         sitekey={REACT_APP_RECAPTCHA_KEY}
                         ref={captchaRef}
-                        onChange={handleCaptcha}/>
+                        onChange={handleCaptcha}
+                        className='contact__block__form__captcha'/>
                 <>
                         <input type='submit' name='submit' value='Get in touch' className='contact__block__form__submit' disabled={isDisabled}/>
                     </>

@@ -109,7 +109,7 @@ export const skillsDatas: SkillDetail[] = [
         },
         Frameworks: {
           title: 'Frameworks',
-          list: ['Vuejs 3', ' Reactjs 16.14 / 18', ' Symphony'],
+          list: [' Reactjs 16.14 / 18', 'Vuejs 3'],
         },
         Libraries: {
           title: 'Libraries',
