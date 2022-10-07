@@ -4,10 +4,12 @@ import AQIDesign from '../img/inspiration.png';
 import RestHome from '../img/restcountry1.png';
 import RestSearch from '../img/restcountry2.png';
 import RestModal from '../img/restcountry3.png';
-import ProjectImage2 from '../img/proj2.png';
 import ProjectImage3 from '../img/proj3.png';
 import ProjectImage4 from '../img/proj5.png';
 import ProjectImage5 from '../img/proj4.png';
+import Loading from "../img/Loading.png";
+import Working from "../img/Working.png";
+import Prototyping from "../img/Prototyping.png";
 import { faPhone, faAt, faLocationDot, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -135,7 +137,25 @@ export const navbarProps: navbarDatas[] = [
   { title: 'Contact', path: 'contact' },
 ];
 
-export const projectsImageList = [
+export interface ImageListDatas {
+  id?: number;
+  col?: number;
+  row?: number;
+  img: string[];
+  title?: string;
+  link?: string;
+  langUsed?: string;
+  client?: string;
+  year?: number;
+  collab?: string;
+  collabLink?: string;
+  finished?: boolean;
+  steps?: string[];
+  about?: string;
+  description?: string[];
+}
+
+export const projectsImageList: ImageListDatas[] = [
   {
     id: 1,
     img: [AQI, AQIWireframes, AQIDesign],
@@ -178,31 +198,31 @@ export const projectsImageList = [
   },
   {
     id: 3,
-    img: [ProjectImage4],
+    img: [Working],
     col: 3,
-    title: 'Project 3',
-    detail: 'link',
-    langUsed: 'Vuejs + SCSS',
+    row: 1,
+    title: 'Coming soon',
+    langUsed: 'To be announced',
     client: 'Me',
     year: 2022,
   },
   {
     id: 4,
-    img: [ProjectImage3],
+    img: [Working],
     col: 1,
-    row: 2,
-    title: 'Project 4',
-    detail: 'link',
+    row: 1,
+    title: 'Coming soon',
+    langUsed: 'To be announced',
     client: 'Me',
     year: 2022,
   },
   {
     id: 5,
-    img: [ProjectImage5],
+    img: [Working],
     col: 2,
-    row: 2,
-    title: 'Project 5',
-    detail: 'link',
+    row: 1,
+    title: 'Coming soon',
+    langUsed: 'To be announced',
     client: 'Me',
     year: 2022,
   },

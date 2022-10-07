@@ -25,7 +25,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
       <ImageList
         cols={useDetectMobile() ? 1 : 3}
         gap={25}
-        rowHeight={'auto'}
+        rowHeight={useDetectMobile() ? 'auto' : 750}
         className="project__gallery"
         variant="quilted"
       >
