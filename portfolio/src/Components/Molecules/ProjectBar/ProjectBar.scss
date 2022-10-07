@@ -1,3 +1,5 @@
+@import './../../../CssVar/CssVar';
+
 main {
   @media screen and (max-width: 850px) {
     display: flex;
@@ -26,7 +28,7 @@ main {
       flex-direction: column;
       width: 15rem;
       text-align: center;
-      border-right: 1px solid rgba(255,119,43,0.7);
+      border-right: 1px solid $dark-orange;
       @media screen and (max-width: 1050px) {
         width: 10rem;
       }
@@ -42,14 +44,14 @@ main {
     .__main__detailbar__block__section__title {
       font-weight: bold;
       font-size: 1.25rem;
-      color: rgba(255,255,255,0.5);
+      color: $light-grey;
       @media screen and (max-width: 1050px) {
         font-size: 1.10rem;
       }
     }
 
     .__main__detailbar__block__section__text {
-      color: rgba(255,119,43,0.7);
+      color: $dark-orange;
       font-size: 1.10rem;
       @media screen and (max-width: 1050px) {
         font-size: 1rem;

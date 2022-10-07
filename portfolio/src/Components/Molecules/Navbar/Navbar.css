@@ -2,9 +2,9 @@ a {
   text-decoration: none;
 }
 a .header__block__navbar__items {
-  font-family: "Grandstander", cursive;
+  font-family: "Tomorrow", sans-serif;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 a .header__block__navbar__items:hover {
   text-underline-color: rgba(255, 119, 43, 0.7);

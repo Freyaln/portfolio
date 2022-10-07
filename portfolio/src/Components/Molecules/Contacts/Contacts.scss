@@ -1,3 +1,5 @@
+@import './../../../CssVar/CssVar';
+
 .contact {
   position: relative;
   display: flex;
@@ -9,8 +11,8 @@
   height: auto;
 
   .contact__title {
-    color: white;
-    font-family: 'Grandstander', cursive;
+    color: $light-grey;
+    font-family: $tomorrow-font;
   }
     .contact__block {
       display: flex;
@@ -23,7 +25,7 @@
         width: 80%;
       }
       .contact__block__form__sent {
-        color: #FFFFFF;
+        color: $light-grey;
       }
     }
     .contact__block__form {
@@ -36,9 +38,9 @@
       height: auto;
 
       label {
-        color: white;
+        color: $light-grey;
         font-size: 1.25rem;
-        font-family: 'Faustina', serif;
+        font-family: $faustina-font;
       }
 
       input {
@@ -52,37 +54,37 @@
       }
 
       input, textarea {
-        background-color: rgba(0,0,0,0.3);
+        background-color: $dark-grey;
         border-radius: 10px;
         border: none;
         resize: none;
         margin-bottom: 1rem;
-        color: white;
+        color: $light-grey;
         font-size: 1.25rem;
-        font-family: 'Faustina', serif;
+        font-family: $faustina-font;
 
         &:focus {
           outline: none;
-          border: 2px solid rgba(255, 119, 43, 0.8) !important;
-          background-color: rgba(0,0,0,0.3);
+          border: 2px solid $dark-orange !important;
+          background-color: $dark-grey;
       }
     }
 
       .contact__block__form__submit {
         width: 8rem;
         height: 3rem;
-        background-color: rgba(255,119,43,0.7);
+        background-color: $dark-orange;
         margin-bottom: 2rem;
         border-radius: 20px !important;
-        font-family: 'Grandstander', cursive;
+        font-family: $tomorrow-font;
         font-size: 1rem;
         font-weight: bold;
 
         &:hover {
           cursor: pointer;
-          color: white;
-          background-color: #222222;
-          border: 1px solid rgba(255,119,43,0.7);
+          color: $light-grey;
+          background-color: $dark-grey;
+          border: 1px solid $dark-orange;
         }
 
         &:disabled {

@@ -1,3 +1,4 @@
+@import './../../../CssVar/CssVar';
 
 .header {
   height: 40rem;
@@ -26,9 +27,9 @@
       bottom: 50px;
       left: 17rem;
       z-index: 10;
-      color: white;
+      color: $light-grey;
       font-size: 4rem;
-      font-family: 'Faustina', serif;
+      font-family: $faustina-font;
       @media screen and (max-width: 1366px) {
         width: 45rem;
         font-size: 3rem;
@@ -73,7 +74,7 @@
       top: 15px;
       right: 50px;
       z-index: 10;
-      color: white;
+      color: $light-grey;
 
       .header__block__navbar__items {
         font-size: 1.25rem;
@@ -82,7 +83,7 @@
       }
 
         &:hover {
-          border-bottom: 2px solid rgba(255,119,43,0.7);
+          border-bottom: 2px solid $dark-orange;
           padding-bottom: 1rem;
         }
       }

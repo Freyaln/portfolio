@@ -1,3 +1,5 @@
+@import './../../../CssVar/CssVar';
+
 .project__about {
   display: flex;
   position: relative;
@@ -30,20 +32,20 @@
     }
 
     .project__about__block__title {
-      color: white;
+      color: $light-grey;
       font-size: 1.5rem;
       width: auto;
-      text-decoration: underline rgba(255,119,43,0.7);
+      text-decoration: underline $dark-orange;
       text-underline-offset: 1rem;
-      font-family: 'Grandstander', cursive;
+      font-family: $tomorrow-font;
     }
   }
 
   .project__about__block__description {
-    color: white;
+    color: $light-grey;
     font-size: 1.10rem;
     white-space: pre-line;
-    font-family: 'Faustina', serif;
+    font-family: $faustina-font;
     @media screen and (max-width: 430px) {
       font-size: 1rem;
     }
@@ -83,12 +85,12 @@
     width: 100%;
     margin-bottom: 5rem;
       .project__flow__steps__title {
-        color: white;
+        color: $light-grey;
         font-size: 1.5rem;
         width: auto;
-        text-decoration: underline rgba(255,119,43,0.7);
+        text-decoration: underline $dark-orange;
         text-underline-offset: 1rem;
-        font-family: 'Grandstander', cursive;
+        font-family: $tomorrow-font;
       }
     .project__flow__steps__block__description {
       display: flex;
@@ -98,11 +100,11 @@
       gap: 2rem;
 
       .project__flow__steps__block__description__text {
-          color: white;
+          color: $light-grey;
           width: 75%;
           font-size: 1.10rem;
           white-space: pre-line;
-          font-family: 'Faustina', serif;
+          font-family: $faustina-font;
       }
       .project__flow__img {
           max-width: 100%;

@@ -24,7 +24,7 @@
   bottom: 50px;
   left: 17rem;
   z-index: 10;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 4rem;
   font-family: "Faustina", serif;
 }
@@ -84,7 +84,7 @@
   top: 15px;
   right: 50px;
   z-index: 10;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 .header .header__block .header__block__navbar .header__block__navbar__items {
   font-size: 1.25rem;

@@ -48,7 +48,7 @@ main .__main__detailbar__block .__main__detailbar__block__section {
 main .__main__detailbar__block .__main__detailbar__block__section__title {
   font-weight: bold;
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 @media screen and (max-width: 1050px) {
   main .__main__detailbar__block .__main__detailbar__block__section__title {

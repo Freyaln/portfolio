@@ -36,7 +36,7 @@
   height: 4rem;
   border: none;
   border-radius: 20px;
-  font-family: "Grandstander", cursive;
+  font-family: "Tomorrow", sans-serif;
 }
 @media screen and (max-width: 1050px) {
   .footer .footer__block__left button {
@@ -50,7 +50,7 @@
 }
 .footer .footer__block__left .footer__block__left__btnContact {
   background-color: rgba(0, 0, 0, 0.3);
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.1rem;
 }
 @media screen and (max-width: 1050px) {
@@ -84,12 +84,12 @@
 }
 .footer .footer__block__left .footer__block__left__btnCv:hover {
   cursor: pointer;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   background-color: #222222;
   border: 1px solid rgba(255, 119, 43, 0.7);
 }
 .footer .footer__block__left .footer__block__left__btnCv:hover a {
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
   font-size: 1.25rem;
 }
@@ -114,7 +114,7 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 5rem;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.7);
 }
 @media screen and (max-width: 1100px) {
   .footer .footer__block__right .__list {
@@ -163,6 +163,9 @@
 }
 .footer .footer__block__right .__list .__list__flex a {
   color: rgba(255, 119, 43, 0.7);
+}
+.footer .footer__block__right .__list .__list__flex a:hover {
+  color: rgba(255, 169, 118, 0.7);
 }
 
 /*# sourceMappingURL=Footer.css.map */

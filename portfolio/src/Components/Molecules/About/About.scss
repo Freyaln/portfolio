@@ -1,3 +1,5 @@
+@import './../../../CssVar/CssVar';
+
 .about {
   display: flex;
   position: relative;
@@ -25,26 +27,33 @@
       width: 80%;
     }
     .about__block__left__title {
-      color: white;
+      color: $light-grey;
       font-size: 1.5rem;
       width: 7rem;
-      border-bottom: 2px solid rgba(255,119,43,0.7);
-      padding-bottom: 1rem;
+      text-decoration: underline $dark-orange;
+      text-underline-offset: 1rem;
       margin-top: 5rem;
-      font-family: 'Grandstander', cursive;
+      font-family: $tomorrow-font;
       }
     }
     .about__block__left__description {
-      color: white;
+      color: $light-grey;
       font-size: 1.10rem;
       white-space: pre-line;
-      font-family: 'Faustina', serif;
+      font-family: $faustina-font;
       @media screen and (max-width: 1100px) {
         font-size: 1rem;
       }
 
       .about__block__left__description__name {
-        color: rgba(255,119,43,0.7);
+        color: $dark-orange;
+
+        a {
+          color: $dark-orange;
+          &:hover {
+            color: $light-orange;
+          }
+        }
       }
     }
 
@@ -65,13 +74,13 @@
     }
 
     .about__block__right__title {
-      color: white;
+      color: $light-grey;
       font-size: 1.5rem;
       width: 4rem;
-      text-decoration: underline rgba(255,119,43,0.7);
+      text-decoration: underline $dark-orange;
       text-underline-offset: 1rem;
       margin-top: 5rem;
-      font-family: 'Grandstander', cursive;
+      font-family: $tomorrow-font;
 
       @media screen and (max-width: 1100px) {
       margin-right: 2rem;
@@ -83,7 +92,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      color: white;
+      color: $light-grey;
       @media screen and (max-width: 530px) {
         justify-content: center;
       }
@@ -101,13 +110,13 @@
         }
 
         li{
-          font-family: 'Faustina', serif;
+          font-family: $faustina-font;
         }
         .__list__title {
           font-size: 1.25rem;
-          font-family: 'Faustina', serif;
+          font-family: $faustina-font;
           @media screen and (max-width: 380px) {
-            text-decoration: underline rgba(255,119,43,0.7);
+            text-decoration: underline $dark-orange;
             text-underline-offset: 1rem;
           }
         }

@@ -22,7 +22,13 @@ const About: FC<IAboutProps> = ({titleLeft, titleRight, aboutMe, skillList}) => 
                     Hello ! I am <span className='about__block__left__description__name'>Aurélien</span> (still) young junior developer eager to learn more.
                     You are currently visiting my portfolio written exclusively in Reactjs with Typescript.
                     {'\n'}{'\n'}
-                    I am where I am today thanks to <span className='about__block__left__description__name'>@Becode.org</span> and <span className='about__block__left__description__name'>@Eonix SA</span>.
+                    I am where I am today thanks to
+                    <span className='about__block__left__description__name'>
+                    <a href='https://becode.org/fr/'> @Becode.org</a>
+                    </span> and
+                    <span className='about__block__left__description__name'>
+                     <a href='https://eonix.be/'> @Eonix SA</a>
+                    </span>.
                     Becode is a bootcamp-like in development where I learned the basics of Javascript, PHP, CSS and Reactjs.It is the place that taught me to love the code and gave me the will to practice, experiment and go further.
                     {'\n'}{'\n'}
                     My internship at Eonix gave me the opportunity to learn Typescript in depth, the hard way. Since then I cannot code without it.

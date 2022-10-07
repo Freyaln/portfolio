@@ -1,12 +1,14 @@
+@import './../../../CssVar/CssVar';
+
 a {
   text-decoration: none;
 
   .header__block__navbar__items {
-    font-family: 'Grandstander', cursive;
+    font-family: $tomorrow-font;
     text-decoration: none;
-    color: white;
+    color: $light-grey;
     &:hover {
-      text-underline-color: rgba(255,119,43,0.7);
+      text-underline-color: $dark-orange;
     }
   }
 }

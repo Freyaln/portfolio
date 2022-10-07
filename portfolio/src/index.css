@@ -1,14 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Faustina&family=Grandstander&display=swap");
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  background-color: #222222;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 2 | @import './src/CssVar/CssVar';
+ *   |         ^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   index.scss 2:9  root stylesheet */
 
-ol, ul {
-  list-style: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import './src/CssVar/CssVar';\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   index.scss 2:9  root stylesheet";
 }
-
-/*# sourceMappingURL=index.css.map */

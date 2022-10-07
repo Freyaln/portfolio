@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {FC, useEffect, useState} from 'react';
+import {FC} from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { ImageList, ImageListItem, ImageListItemBar, styled } from '@mui/material';
+import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import { projectsImageList } from '../../../Datas/Datas';
 import './Projects.scss';
 import Separator from '../../Atoms/Separator/Seperator';
@@ -37,7 +37,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
                   borderBottomLeftRadius: '20px',
                   borderBottomRightRadius: '20px',
                   height: '100%',
-                  backgroundColor: 'rgba(255,119,43,0.4)',
+                  backgroundColor: 'rgba(255,119,43,0.7)',
                   textAlign: 'center',
                   borderRadius: '20px',
                   '.MuiImageListItemBar-title': {
@@ -52,7 +52,7 @@ const Projects: FC<IProjectsProps> = ({ classname }) => {
                 },
                 '.MuiImageListItemBar-subtitle': {
                   fontFamily: "'Faustina', serif",
-                  fontSize: '0.90rem',
+                  fontSize: '1rem',
                 },
               },
             }}

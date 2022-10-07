@@ -1,3 +1,5 @@
+@import './../../../CssVar/CssVar';
+
 .footer {
   display: flex;
   position: relative;
@@ -32,7 +34,7 @@
       height: 4rem;
       border: none;
       border-radius: 20px;
-      font-family: 'Grandstander', cursive;
+      font-family: $tomorrow-font;
       @media screen and (max-width: 1050px) {
         width: 10rem;
       }
@@ -42,8 +44,8 @@
     }
 
     .footer__block__left__btnContact {
-      background-color: rgba(0,0,0,0.3);
-      color: #FFF;
+      background-color: $dark-grey;
+      color: $light-grey;
       font-size: 1.10rem;
       @media screen and (max-width: 1050px) {
         font-size: 1rem;
@@ -53,14 +55,14 @@
       }
       &:hover {
         cursor: pointer;
-        background-color: rgba(255,119,43,0.7);
+        background-color: $dark-orange;
         color: #222222;
         font-weight: bold;
       }
     }
 
     .footer__block__left__btnCv {
-      background-color: rgba(255,119,43,0.7);
+      background-color: $dark-orange;
       a {
         color: black;
         font-weight: bold;
@@ -71,11 +73,11 @@
       }
       &:hover {
         cursor: pointer;
-        color: white;
+        color: $light-grey;
         background-color: #222222;
-        border: 1px solid rgba(255,119,43,0.7);
+        border: 1px solid $dark-orange;
         a {
-          color: #FFF;
+          color: $light-grey;
           font-weight: bold;
           font-size: 1.25rem;
         }
@@ -100,7 +102,7 @@
         justify-content: space-between;
         align-items: flex-end;
         gap: 5rem;
-        color: #FFF;
+        color: $light-grey;
         @media screen and (max-width: 1100px) {
           gap: 4rem;
         }
@@ -122,7 +124,7 @@
             flex-direction: row;
             align-items: center;
             gap: 1rem;
-            font-family: 'Faustina', serif;
+            font-family: $faustina-font;
             font-size: 1rem;
 
             @media screen and (max-width: 1366px) {
@@ -139,7 +141,10 @@
           }
 
           a {
-            color: rgba(255,119,43,0.7);
+            color: $dark-orange;
+            &:hover {
+              color: $light-orange;
+            }
           }
         }
       }
