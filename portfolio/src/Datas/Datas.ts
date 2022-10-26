@@ -4,12 +4,10 @@ import AQIDesign from '../img/inspiration.png';
 import RestHome from '../img/restcountry1.png';
 import RestSearch from '../img/restcountry2.png';
 import RestModal from '../img/restcountry3.png';
-import ProjectImage3 from '../img/proj3.png';
-import ProjectImage4 from '../img/proj5.png';
-import ProjectImage5 from '../img/proj4.png';
-import Loading from "../img/Loading.png";
 import Working from "../img/Working.png";
-import Prototyping from "../img/Prototyping.png";
+import Movie1 from '../img/moviebrowser1.png';
+import Movie2 from '../img/moviebrowser2.png';
+import Movie3 from '../img/moviebrowser3.png';
 import { faPhone, faAt, faLocationDot, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -115,7 +113,7 @@ export const skillsDatas: SkillDetail[] = [
         },
         Libraries: {
           title: 'Libraries',
-          list: ['MaterialUI', ' HeadlessUI', ' TailwindCSS'],
+          list: ['MaterialUI', ' HeadlessUI', ' TailwindCSS', 'Axios'],
         },
       },
     ],
@@ -198,13 +196,21 @@ export const projectsImageList: ImageListDatas[] = [
   },
   {
     id: 3,
-    img: [Working],
+    img: [Movie1, Movie2, Movie3],
     col: 3,
     row: 1,
-    title: 'Coming soon',
-    langUsed: 'To be announced',
+    title: 'MovieBrowser (WIP)',
+    link: 'https://freyaln-moviebrowser.netlify.app/',
+    langUsed: 'Reactjs + Typescript + HeadlessUI + Axios + TMDb API',
     client: 'Me',
+    steps: ['The image grid', 'The modal'],
+    about: 'I started this website when I still was in Becode and the goal was to build it in reactjs with tons of MaterialUI components. At the time it felt like a enormous cliff to climb on and with my internship approaching I dropped the project.\n\n' +
+      'But in October 2022 I decided to give it a go but harder, by harder I meant that I would build it in Reactjs, yes, but with Typescript and without as much as libs possible. And so I did !\n\n' +
+      'It is still a work in progress and will be enhanced (especialy the responsive design).',
+    description: ['The most fun part was this one, building an ImageGrid like component in the MaterialUI style but from scratch. I though that I would bang my head in the wall multiple times but all in all, juste once. Juste once to realise that I should go for a grid layout.',
+    'This was a bit more tricky, I wanted for some times to test the HeadlessUI lib. I choose their modal to do so and gosh that was not simple to comprehend for a newbie. But hey, I finally did it !'],
     year: 2022,
+    finished: false,
   },
   {
     id: 4,

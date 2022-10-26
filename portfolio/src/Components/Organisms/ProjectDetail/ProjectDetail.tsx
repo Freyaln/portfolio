@@ -40,7 +40,8 @@ const ProjectDetail = () => {
               collab={projectsImageList[fill].collab}
               collabLink={projectsImageList[fill].collabLink}
               finished={wip}
-              link={projectsImageList[fill].link}/>
+              link={projectsImageList[fill].link}
+              title={projectsImageList[fill].title}/>
           <ProjectAbout title={projectsImageList[fill].title + ' ' + 'details'}
                         about={projectsImageList[fill].about}
                         img={projectsImageList[fill].img[0]}

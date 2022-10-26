@@ -11,9 +11,10 @@ interface ProjectDetail {
     collabLink? : string;
     finished? : string;
     link?: string;
+    title?: string;
 }
 
-const ProjectBar: FC<ProjectDetail> = ({client, year, lang, collab,link, collabLink, finished}) => {
+const ProjectBar: FC<ProjectDetail> = ({client, year, lang, collab,link, collabLink, finished, title}) => {
     return (
         <section className='__main__detailbar__block'>
             {client && <div className='__main__detailbar__block__section'>
@@ -44,7 +45,7 @@ const ProjectBar: FC<ProjectDetail> = ({client, year, lang, collab,link, collabL
             { link && <div className='__main__detailbar__block__section'>
                 <span className='__main__detailbar__block__section__title'>Website</span>
                 {'\n'}
-                <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'><a href={link} target='_blank' rel="noreferrer">Restapicountry</a></Typo>
+                <Typo type={TextType.TEXT} className='__main__detailbar__block__section__text'><a href={link} target='_blank' rel="noreferrer">{title}</a></Typo>
             </div>}
         </section>
     )
