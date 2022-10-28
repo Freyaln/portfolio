@@ -206,7 +206,9 @@ export const projectsImageList: ImageListDatas[] = [
     steps: ['The image grid', 'The modal'],
     about: 'I started this website when I still was in Becode and the goal was to build it in reactjs with tons of MaterialUI components. At the time it felt like a enormous cliff to climb on and with my internship approaching I dropped the project.\n\n' +
       'But in October 2022 I decided to give it a go but harder, by harder I meant that I would build it in Reactjs, yes, but with Typescript and without as much as libs possible. And so I did !\n\n' +
-      'It is still a work in progress and will be enhanced (especialy the responsive design).',
+      'It is still a work in progress and will be enhanced (especialy the responsive design).\n\n' +
+      'Update 1 : Added responsiveness to some extend \n' +
+      'Update 2 : Added search functionality',
     description: ['The most fun part was this one, building an ImageGrid like component in the MaterialUI style but from scratch. I though that I would bang my head in the wall multiple times but all in all, juste once. Juste once to realise that I should go for a grid layout.',
     'This was a bit more tricky, I wanted for some times to test the HeadlessUI lib. I choose their modal to do so and gosh that was not simple to comprehend for a newbie. But hey, I finally did it !'],
     year: 2022,
