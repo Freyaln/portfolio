@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {FC, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react';
 import Typo, {TextType} from "../../Atoms/Typo/Typo";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
@@ -44,10 +44,11 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
         setIsFilled({...isFilled, [e.currentTarget.name]: e.currentTarget.value,
         });
     }
-
-    if(isFilled.fullname.length >= 5 && isFilled.email.length >= 10 && isFilled.message.length >= 15 ) {
-        setInputValidated(true)
-    }
+    useEffect(() => {
+        if(isFilled.fullname.length >= 5 && isFilled.email.length >= 10 && isFilled.message.length >= 15 ) {
+            setInputValidated(true)
+        }
+    },[isFilled])
 
 
     function handleCaptcha() {
@@ -82,41 +83,49 @@ const Contacts: FC<IContactsProps>= ({fullname, lastname, firstname, email, mess
                     <label htmlFor='fullname'>
                     Fullname
                     </label>
-                    <input type='text' name='fullname' autoComplete='off' required={true} minLength={5} onBlur={handleInputChange}/>
-                 </>}
+                         <input className={isFilled.fullname.length > 1 && isFilled.fullname.length < 5 ? 'contact__block__form__input__wrong' : 'contact__block__form__input'} type='text' name='fullname' autoComplete='off' required={ true } minLength={ 5 }
+                                onBlur={ handleInputChange }/>
+                        </>}
                 {lastname &&
                  <>
                  <label htmlFor='lastname'>
                     Lastname
                  </label>
-                    <input type='text' name='lastname' autoComplete='off' required={true}/>
+                    <input className='contact__block__form__input' type='text' name='lastname' autoComplete='off' required={true}/>
                  </>}
                 {firstname &&
                  <>
                 <label htmlFor='firstname'>
                     Firstname
                 </label>
-                    <input type='text' name='firstname' autoComplete='off' required={true}/>
+                    <input className='contact__block__form__input' type='text' name='firstname' autoComplete='off' required={true}/>
                 </>}
                 {email &&
                  <>
                 <label htmlFor='email'>
                     Email
                 </label>
-                    <input type='email' name='email' autoComplete='new-password' required={true} minLength={10} onBlur={handleInputChange}/>
-                </>}
+                         <input className={isFilled.email.length > 1 && isFilled.email.length < 10 ? 'contact__block__form__input__wrong' : 'contact__block__form__input'} type='email' name='email'
+                                autoComplete='new-password' required={ true } minLength={ 10 }
+                                onBlur={ handleInputChange }/>
+                    </>
+                }
                 {message &&
                  <>
                  <label htmlFor='message'>
                     Message
                  </label>
-                     <textarea name='message' rows={messageRowCount} required={true} minLength={15} onBlur={handleTextAreaChange}/>
-                 </>}
-                    <ReCAPTCHA
+                             <textarea className={isFilled.message.length > 1 && isFilled.message.length < 15 ? 'contact__block__form__textarea__wrong' : 'contact__block__form__textarea'} name='message'
+                                       rows={ messageRowCount } required={ true } minLength={ 15 }
+                                       onBlur={ handleTextAreaChange }/>
+                     </>}
+                    {inputValidated &&
+                     <ReCAPTCHA
                         sitekey={REACT_APP_RECAPTCHA_KEY}
                         ref={captchaRef}
                         onChange={handleCaptcha}
                         className='contact__block__form__captcha'/>
+                    }
                 <>
                         <input type='submit' name='submit' value='Get in touch' className='contact__block__form__submit' disabled={isDisabled}/>
                     </>

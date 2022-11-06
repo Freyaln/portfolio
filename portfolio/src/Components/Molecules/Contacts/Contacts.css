@@ -42,12 +42,26 @@
   font-size: 1.25rem;
   font-family: "Faustina", serif;
 }
-.contact .contact__block__form input {
+.contact .contact__block__form .contact__block__form__input {
   width: 100%;
   height: 3rem;
 }
-.contact .contact__block__form textarea {
+.contact .contact__block__form .contact__block__form__input__wrong {
   width: 100%;
+  height: 3rem;
+  border: 1px solid red;
+}
+.contact .contact__block__form .contact__block__form__textarea {
+  width: 100%;
+}
+.contact .contact__block__form .contact__block__form__textarea__wrong {
+  width: 100%;
+  border: 1px solid red;
+}
+.contact .contact__block__form .contact__block__form__alert {
+  font-size: 1rem;
+  color: red;
+  transform: translateY(-3rem);
 }
 .contact .contact__block__form input, .contact .contact__block__form textarea {
   background-color: rgba(0, 0, 0, 0.3);
