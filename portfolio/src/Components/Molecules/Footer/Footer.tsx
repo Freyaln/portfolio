@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Typo, { TextType } from '../../Atoms/Typo/Typo';
 import { InfosDatas } from '../../../Datas/Datas';
 import List from '../../Atoms/List/List';
-import CvEn from '../../../CV/CvEnglish.pdf';
+import CvEn from '../../../CV/Freyling_Aurelien_EN.pdf';
 import './Footer.scss';
 
 /** @typedef IFooterProps
