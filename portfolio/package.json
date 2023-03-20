@@ -32,7 +32,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{ts,tsx}\"",
-    "test": "vitest run"
+    "test": "vitest run",
+    "docs" : "jsdoc -c jsdoc.conf.json"
   },
   "browserslist": {
     "production": [
@@ -57,6 +58,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "autoprefixer": "^10.4.4",
+    "better-docs": "^2.7.2",
     "eslint": "8.22.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
@@ -64,6 +66,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "jsdoc": "^4.0.0",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "react-scroll": "^1.8.7",

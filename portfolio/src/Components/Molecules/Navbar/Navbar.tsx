@@ -1,19 +1,23 @@
 import * as React from 'react';
-import {FC, useState} from 'react';
-import Typo, {TextType} from "../../Atoms/Typo/Typo";
+import { FC, useState } from 'react';
+import Typo, { TextType } from '../../Atoms/Typo/Typo';
 import { v4 as uuidv4 } from 'uuid';
 import './Navbar.scss';
-import {navbarDatas} from "../../../Datas/Datas";
+import { navbarDatas } from '../../../Datas/Datas';
 import { Link } from 'react-scroll';
 import { slide as Menu } from 'react-burger-menu';
-import {useDetectMobile} from "../../../Helpers/CheckRes";
+import { useDetectMobile } from '../../../Helpers/CheckRes';
 
+/** @typedef INavbarPropsInterface
+ * @prop { string } classname Classname used to style the list of the menu
+ * @prop { navbarDatas[] } options Display a list of the composing the menu
+ */
 interface INavbarPropsInterface {
     classname: string;
     options: navbarDatas[];
 }
 
-var styles = {
+const styles = {
     bmBurgerButton: {
         position: 'relative',
         width: '36px',
@@ -48,52 +52,54 @@ var styles = {
     bmItem: {
         display: 'inline-block',
     },
-}
+};
 
-const Navbar: FC<INavbarPropsInterface> = ({classname, options }) => {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false)
+/** @param { INavbarPropsInterface } props */
+const Navbar: FC<INavbarPropsInterface> = ({ classname, options }) => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const handleOpen = (state: { isOpen: boolean | ((prevState: boolean) => boolean) }) => {
         setMenuOpen(state.isOpen);
-    }
+    };
     function handleClose() {
         setMenuOpen(false);
     }
 
     return (
         <nav>
-            {useDetectMobile() ?
+            {useDetectMobile() ? (
                 <Menu right isOpen={menuOpen} onStateChange={handleOpen} styles={styles}>
                     <ol className={classname}>
-                        {options.map((items, index) =>
-
+                        {options.map((items, index) => (
                             <li key={uuidv4()}>
-                                <Link key={uuidv4()} activeClass='active' to={items.path} smooth={true} onClick={() => handleClose()}>
-                                    <Typo
-                                        type={TextType.TEXT}
-                                        className='header__block__navbar__items'>
+                                <Link
+                                    key={uuidv4()}
+                                    activeClass="active"
+                                    to={items.path}
+                                    smooth={true}
+                                    onClick={() => handleClose()}
+                                >
+                                    <Typo type={TextType.TEXT} className="header__block__navbar__items">
                                         {items.title}
                                     </Typo>
                                 </Link>
                             </li>
-                        )}
+                        ))}
                     </ol>
                 </Menu>
-                :
+            ) : (
                 <ol className={classname}>
-                {options.map((items, index) =>
-
+                    {options.map((items, index) => (
                         <li key={uuidv4()}>
-                            <Link key={uuidv4()} activeClass='active' to={items.path} smooth={true}>
-                                <Typo
-                                    type={TextType.TEXT}
-                                    className='header__block__navbar__items'>
+                            <Link key={uuidv4()} activeClass="active" to={items.path} smooth={true}>
+                                <Typo type={TextType.TEXT} className="header__block__navbar__items">
                                     {items.title}
                                 </Typo>
                             </Link>
                         </li>
-                    )}
-            </ol> }
+                    ))}
+                </ol>
+            )}
         </nav>
     );
 };

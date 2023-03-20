@@ -1,9 +1,9 @@
 import { useLayoutEffect, useState } from 'react';
 
-const breakpoint: number = 850;
+const breakpoint = 850;
 
 export const useDetectMobile = () => {
-    const [ isMobile, setIsMobile ] = useState<boolean | null>(null);
+    const [isMobile, setIsMobile] = useState<boolean | null>(null);
     useLayoutEffect(() => {
         const updateResolution = () => {
             window.innerWidth > breakpoint ? setIsMobile(false) : setIsMobile(true);

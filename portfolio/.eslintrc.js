@@ -1,47 +1,34 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ['plugin:react/recommended', 'prettier'],
-  parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+  extends: [
+    'plugin:react/recommended', // uses react-specific linting rules
+    'plugin:react/jsx-runtime',
+    'plugin:@typescript-eslint/recommended', // uses typescript-specific linting rules
+    'prettier', // disables react-specific linting rules that conflict with prettier
+    'plugin:prettier/recommended', // enables eslint-plugin-prettier and eslint-config-prettier
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: 6,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  settings: {
+    react: {
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+  },
   rules: {
-    'max-len': ['warn', { code: 100, ignoreUrls: true }],
-    'require-jsdoc': 'off',
-    'valid-jsdoc': 'off',
-    'no-unused-vars': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'react/display-name': 'off',
-    '@typescript-eslint/member-delimiter-style': [
-      'warn',
-      {
-        multiline: {
-          delimiter: 'semi',
-          requireLast: true,
-        },
-        singleline: {
-          delimiter: 'semi',
-          requireLast: false,
-        },
-      },
-    ],
-    'comma-dangle': [
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'prettier/prettier': [
       'error',
       {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never',
+        endOfLine: 'auto',
       },
     ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"]
   },
 };
